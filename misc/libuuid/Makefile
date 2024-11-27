@@ -11,7 +11,7 @@ WWW=		https://github.com/util-linux/util-linux
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/Documentation/licenses/COPYING.BSD-3-Clause
 
-USES=		pkgconfig meson tar:xz bison
+USES=		bison meson pkgconfig tar:xz
 USE_LDCONFIG=	yes
 
 MESON_ARGS=	--auto-features=disabled -Dbuild-libuuid=enabled -Dprogram-tests=false
