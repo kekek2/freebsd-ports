@@ -6,7 +6,7 @@ DISTNAME=	util-linux-${UTIL_LINUX_PORTVERSION}
 
 MAINTAINER=	kekek2@ya.ru
 COMMENT=	Library generates and parses 128-bit Universally Unique IDs (UUIDs)
-WWW=		https://github.com/util-linux/util-linux
+WWW=		https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/Documentation/licenses/COPYING.BSD-3-Clause
