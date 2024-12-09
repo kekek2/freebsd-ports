@@ -15,14 +15,13 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	kekek2
 GH_PROJECT=	util-linux
-GH_TAGNAME=	aab4518d081613c370cbcac81ecbdfb4a0d55aeb
+GH_TAGNAME=	639ba6c0aee1959585f625f0ed4969c59e4023f5
 
 MESON_ARGS=	--auto-features=disabled -Dbuild-libuuid=enabled -Dprogram-tests=false
 
-OPTIONS_DEFINE=	DOCS NLS
+OPTIONS_DEFINE=	DOCS
 OPTIONS_SUB=	yes
 DOCS_BUILD_DEPENDS=	asciidoctor:textproc/rubygem-asciidoctor
-NLS_USES=	gettext
 
 UTIL_LINUX_PORTVERSION=	2.40.2
 
