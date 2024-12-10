@@ -1,6 +1,7 @@
 PORTNAME=	gvm
 DISTVERSIONPREFIX=	v
 DISTVERSION=	22.12.1
+PORTREVISION=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	-libs
 
@@ -21,7 +22,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libnet.so:net/libnet \
 		libpaho-mqtt3a.so:net/libpaho-mqtt3 \
 		libssh.so:security/libssh \
-		libuuid.so:misc/e2fsprogs-libuuid
+		libuuid.so:misc/libuuid
 RUN_DEPENDS=	doxygen>0:devel/doxygen
 
 USES=		cmake gnome pkgconfig
