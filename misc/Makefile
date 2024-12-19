@@ -229,6 +229,7 @@
     SUBDIR += lf
     SUBDIR += libad9361-iio
     SUBDIR += libartnet
+    SUBDIR += libblkid
     SUBDIR += libcomps
     SUBDIR += libeatmydata
     SUBDIR += libemos
