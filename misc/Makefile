@@ -246,6 +246,7 @@
     SUBDIR += libsupertone
     SUBDIR += libsweep-lidar
     SUBDIR += libutf
+    SUBDIR += libuuid
     SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lightgbm
