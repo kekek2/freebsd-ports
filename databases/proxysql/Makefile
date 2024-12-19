@@ -18,11 +18,10 @@ BUILD_DEPENDS=	aclocal:devel/automake \
 		${LOCALBASE}/bin/grep:textproc/gnugrep \
 		libgcrypt>0:security/libgcrypt \
 		libtoolize:devel/libtool \
-		e2fsprogs-libuuid>0:misc/e2fsprogs-libuuid \
 		gnutls>0:security/gnutls
 RUN_DEPENDS=	libgcrypt>0:security/libgcrypt \
-		e2fsprogs-libuuid>0:misc/e2fsprogs-libuuid \
 		gnutls>0:security/gnutls
+LIB_DEPENDS+=	libuuid.so:misc/libuuid
 
 USES=		compiler:c++11-lang gmake libtool perl5 python:build shebangfix
 USE_PERL5=	build
