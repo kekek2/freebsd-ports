@@ -1,6 +1,7 @@
 PORTNAME=	hyprland
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.45.2
+PORTREVISION=	1
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -18,7 +19,7 @@ LIB_DEPENDS=	libhyprlang.so:devel/hyprlang \
 		libhyprutils.so:devel/hyprutils \
 		libdrm.so:graphics/libdrm \
 		libwayland-server.so:graphics/wayland \
-		libuuid.so:misc/e2fsprogs-libuuid \
+		libuuid.so:misc/libuuid \
 		libaquamarine.so:x11-toolkits/aquamarine \
 		libhyprcursor.so:x11/hyprcursor \
 		libinput.so:x11/libinput \

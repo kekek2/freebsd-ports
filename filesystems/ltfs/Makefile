@@ -1,6 +1,7 @@
 PORTNAME=	ltfs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.4.6.2
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-10513
 CATEGORIES=	filesystems sysutils
 
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libicudata.so:devel/icu \
 		libpkg.so:${PKG_ORIGIN} \
-		libuuid.so:misc/e2fsprogs-libuuid
+		libuuid.so:misc/libuuid
 
 USES=		autoreconf compiler:c11 fuse gnome libtool:build pkgconfig \
 		python shebangfix ssl

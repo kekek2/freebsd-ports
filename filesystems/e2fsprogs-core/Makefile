@@ -1,6 +1,6 @@
 PORTNAME=	e2fsprogs
 PORTVERSION=	1.47.1
-PORTREVISION?=	0	# NOTE: when bumping PORTREVISION, also bump ../e2fsprogs/Makefile!
+PORTREVISION?=	1	# NOTE: when bumping PORTREVISION, also bump ../e2fsprogs/Makefile!
 CATEGORIES?=	filesystems sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 
@@ -32,7 +32,7 @@ CONFIGURE_ARGS?=--disable-fsck \
 		--disable-e2initrd-helper \
 		--disable-libuuid \
 		--disable-uuidd \
-		--enable-libblkid \
+		--disable-libblkid \
 		--enable-elf-shlibs \
 		--libdir='${PREFIX}/lib/e2fsprogs/' \
 		--includedir='${PREFIX}/include/e2fsprogs/' \
@@ -79,8 +79,8 @@ NLS_USES=		gettext iconv:build
 BASHTESTS_BUILD_DEPENDS=	${BASH_CMD}:shells/bash
 BASH_CMD=	${LOCALBASE}/bin/bash
 
-LIB_DEPENDS+=	libblkid.so:filesystems/e2fsprogs-libblkid
-LIB_DEPENDS+=	libuuid.so:misc/e2fsprogs-libuuid
+LIB_DEPENDS+=	libblkid.so:misc/libblkid \
+		libuuid.so:misc/libuuid
 
 LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_LIBS+=	-L${LOCALBASE}/lib -lunwind
@@ -311,9 +311,6 @@ post-install:
 .endfor
 .endif
 	# remove or relocate files installed by other ports already, or shadowing system files:
-	cd ${STAGEDIR}${PREFIX} && \
-		${XARGS} <${FILESDIR}/unwanted ${RM} && \
-		${RMDIR} include/e2fsprogs/blkid
 	${MV} ${STAGEDIR}${PREFIX}/bin/compile_et ${STAGEDIR}${PREFIX}/bin/e2fsprogs-compile_et
 	${MV} ${STAGEDIR}${PREFIX}/share/man/man1/compile_et.1 ${STAGEDIR}${PREFIX}/share/man/man1/e2fsprogs-compile_et.1
 	${MKDIR} ${STAGEDIR}${DATADIR}/et/
